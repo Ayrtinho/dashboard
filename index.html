@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+                <div class="sidebar-sticky">
+                    <h2 class="text-white text-center py-3">Dabang</h2>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link text-white active" href="#"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-trophy"></i> Leaderboard</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-box"></i> Orders</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-cart"></i> Products</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-bar-chart"></i> Sales Report</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-envelope"></i> Messages</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#"><i class="bi bi-gear"></i> Settings</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Admin Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-10">
+                <header class="d-flex justify-content-between align-items-center p-3 bg-white shadow-sm">
+                    <h1 class="fs-4"><i class="bi bi-bar-chart-line"></i> Dashboard</h1>
+                    <select id="language-selector" class="form-select w-auto">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                    <div class="admin-info d-flex align-items-center">
+                        <img src="admin.jpg" class="rounded-circle me-2" width="40" height="40">
+                        <span>CEO (Admin)</span>
+                    </div>
+                </header>
+
+                <!-- Cards -->
+                <section class="row mt-3">
+                    <div class="col-md-3">
+                        <div class="card bg-danger text-white text-center p-3"><i class="bi bi-cash-stack"></i> $1k <p>Total Sales</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-white text-center p-3"><i class="bi bi-cart-check"></i> 300 <p>Total Orders</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white text-center p-3"><i class="bi bi-box-seam"></i> 5 <p>Product Sold</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-primary text-white text-center p-3"><i class="bi bi-people"></i> 8 <p>New Customers</p></div>
+                    </div>
+                </section>
+
+                <!-- Gráficos -->
+                <section class="row mt-4">
+                    <div class="col-md-6">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <canvas id="visitorChart"></canvas>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

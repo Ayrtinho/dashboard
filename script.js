@@ -50,3 +50,5 @@ var customerChart = new Chart(customerCtx, {
 document.getElementById('language-selector').addEventListener('change', function () {
     alert("Idioma alterado para: " + this.value);
 });
+
+
